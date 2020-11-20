@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 import Dashboard from "./containers/Dashboard";
 import Login from './containers/Login';
 import SignUp from './containers/SignUp';
+import Messages from './containers/Messages';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                             <Route path="/login" component={Login} />
                             <Route path="/signup" component={SignUp} />
                             <Route path="/dashboard" component={Dashboard}/>
+                            <Route path="/messages" component={Messages}/>
                         </Switch>
                     </div>
                 </div>

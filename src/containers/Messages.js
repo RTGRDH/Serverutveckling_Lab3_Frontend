@@ -2,57 +2,56 @@ import React, {useEffect} from 'react';
 import './Dashboard.css';
 import { Table } from 'react-bootstrap';
 
-class Dashboard extends React.Component{
+class Messages extends React.Component{
     state = {
-        logs: []
+        messages: []
     }
 
     componentWillMount() {
         let requestOptions = {
-            method: 'POST',
+            method: 'GET',
             redirect: 'follow'
         };
-        let url = "http://localhost:6969/getUsersLogs?currentUser=" + sessionStorage.getItem('currentUser');
+        let url = "http://localhost:6969/getMessages?currentUser=" + sessionStorage.getItem('currentUser');
         fetch(url, requestOptions)
             .then(response => response.json())
             .then((data) => {
                 this.setState({
-                    logs: data
+                    messages: data
                 })
-                console.log(this.state.logs);
+                console.log(this.state.messages);
             })
             .catch(error => console.log('error', error));
     }
 
     render()
     {
-        let logs = this.state.logs.map((log) => {
+        let messages = this.state.messages.map((msg) => {
             return (
-                <tr key={log.id}>
+                <tr key={msg.id}>
                     <td>
-                        {log.title}
+                        {msg.title}
                     </td>
                     <td>
-                        {log.content}
+                        {msg.content}
                     </td>
                     <td>
-                        {log.user.username}
                     </td>
                 </tr>
             )
         });
         return (
-            <div className = "Personliga Loggar">
+            <div className = "Meddelanden">
                 <Table>
                     <thead>
-                        <tr>
-                            <th>Titel</th>
-                            <th>Innehåll</th>
-                            <th>Skapad Av</th>
-                        </tr>
+                    <tr>
+                        <th>Titel</th>
+                        <th>Innehåll</th>
+                        <th>Skapad Av</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        {logs}
+                    {messages}
                     </tbody>
                 </Table>
             </div>
@@ -60,4 +59,4 @@ class Dashboard extends React.Component{
     }
 }
 
-export default Dashboard;
+export default Messages;
