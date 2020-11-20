@@ -29,7 +29,7 @@ function Login(props) {
                 }
                 else
                 {
-                    alert("No user found. Check your username or password.")
+                    alert("User not found.")
                 }
             })
             .catch(error => console.log('error', error));
