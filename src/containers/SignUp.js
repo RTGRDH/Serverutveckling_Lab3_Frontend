@@ -9,11 +9,11 @@ function SignUp(props) {
     const handleSignUp = async () => {
         //props.history.push('/dashboard');
         //let response = await fetch; //Getting data
-        var myHeaders = new Headers();
+        let myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
-        var raw = JSON.stringify({"username": username.value, "password": password.value});
-        var requestOptions = {
+        let raw = JSON.stringify({"username": username.value, "password": password.value});
+        let requestOptions = {
             method: 'POST',
             headers: myHeaders,
             body: raw,

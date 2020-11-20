@@ -2,57 +2,57 @@ import React, {useEffect} from 'react';
 import './Dashboard.css';
 import { Table } from 'react-bootstrap';
 
-class Messages extends React.Component{
+class otherLogs extends React.Component{
     state = {
-        messages: []
+        logs: []
     }
 
     componentWillMount() {
         let requestOptions = {
-            method: 'GET',
+            method: 'POST',
             redirect: 'follow'
         };
-        let url = "http://localhost:6969/getMessages?currentUser=" + sessionStorage.getItem('currentUser');
+        let url = "http://localhost:6969/getOtherUsersLogs?currentUser=" + sessionStorage.getItem('currentUser');
         fetch(url, requestOptions)
             .then(response => response.json())
             .then((data) => {
                 this.setState({
-                    messages: data
+                    logs: data
                 })
-                console.log(this.state.messages);
+                console.log(this.state.logs);
             })
             .catch(error => console.log('error', error));
     }
 
     render()
     {
-        let messages = this.state.messages.map((msg) => {
+        let logs = this.state.logs.map((log) => {
             return (
-                <tr key={msg.id}>
+                <tr key={log.id}>
                     <td>
-                        {msg.title}
+                        {log.title}
                     </td>
                     <td>
-                        {msg.content}
+                        {log.content}
                     </td>
                     <td>
-                        {msg.fromUser.username}
+                        {log.user.username}
                     </td>
                 </tr>
             )
         });
         return (
-            <div className = "Meddelanden">
+            <div className = "Personliga Loggar">
                 <Table>
                     <thead>
                     <tr>
                         <th>Titel</th>
                         <th>Innehåll</th>
-                        <th>Skickad av</th>
+                        <th>Skapad Av</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {messages}
+                    {logs}
                     </tbody>
                 </Table>
             </div>
@@ -60,4 +60,4 @@ class Messages extends React.Component{
     }
 }
 
-export default Messages;
+export default otherLogs;

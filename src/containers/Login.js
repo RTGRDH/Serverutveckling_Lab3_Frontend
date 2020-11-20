@@ -20,13 +20,13 @@ function Login(props) {
             redirect: 'follow'
         };
 
-        fetch("http://localhost:6969/login", requestOptions)
+        await fetch("http://localhost:6969/login", requestOptions)
             .then(response => {
                 console.log(response)
                 if(response.ok)
                 {
-                    props.history.push('/dashboard');
                     sessionStorage.setItem('currentUser', ''+username.value+'');
+                    props.history.push('/dashboard');
                 }
                 else
                 {
