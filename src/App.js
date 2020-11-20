@@ -13,6 +13,7 @@ function App() {
                     <div className="header">
                         <NavLink activeClassName="active" to="/login">Login</NavLink>
                         <NavLink activeClassName="active" to="/signup">Sign Up</NavLink>
+                        <NavLink activeClassName="active" to="/messages">Messages</NavLink>
                     </div>
                     <div className="content">
                         <Switch>
