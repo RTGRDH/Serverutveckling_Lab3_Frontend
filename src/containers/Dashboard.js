@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import './Dashboard.css';
 import { Table } from 'react-bootstrap';
 
 class Dashboard extends React.Component{
@@ -59,5 +58,4 @@ class Dashboard extends React.Component{
         );
     }
 }
-
 export default Dashboard;

@@ -5,6 +5,8 @@ import Login from './containers/Login';
 import SignUp from './containers/SignUp';
 import Messages from './containers/Messages';
 import otherLogs from "./containers/OtherLogs";
+import CreateLog from "./containers/CreateLog";
+import CreateMessage from './containers/CreateMessage';
 
 function App() {
     console.log(sessionStorage.getItem('currentUser'));
@@ -16,8 +18,10 @@ function App() {
                         <NavLink activeClassName="active" to="/login">Login</NavLink>
                         <NavLink activeClassName="active" to="/signup">Sign Up</NavLink>
                         <NavLink activeClassName="active" to="/dashboard">Personal Log</NavLink>
+                        <NavLink activeClassName="active" to="/createLog">Create a Log</NavLink>
                         <NavLink activeClassName="active" to="/otherLogs">Other Logs</NavLink>
                         <NavLink activeClassName="active" to="/messages">Messages</NavLink>
+                        <NavLink activeClassName="active" to="/createMessage">Send a Message</NavLink>
                     </div>
                     <div className="content">
                         <Switch>
@@ -26,6 +30,8 @@ function App() {
                             <Route path="/dashboard" component={Dashboard}/>
                             <Route path="/otherLogs" component={otherLogs}/>
                             <Route path="/messages" component={Messages}/>
+                            <Route path="/createLog" component={CreateLog}/>
+                            <Route path="/createMessage" component={CreateMessage}/>
                         </Switch>
                     </div>
                 </div>

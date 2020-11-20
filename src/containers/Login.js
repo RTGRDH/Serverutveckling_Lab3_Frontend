@@ -1,7 +1,7 @@
-<!--
+/*
  All types of forms such as login, sign up, create a log and send message is using code from following link:
 www.cluemediator.com/login-app-create-login-form-in-reactjs-using-secure-rest-api
- -->
+*/
 import React, { useState } from 'react';
 function Login(props) {
     const username = useFormInput('');
