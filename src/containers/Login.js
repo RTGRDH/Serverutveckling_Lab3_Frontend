@@ -1,3 +1,7 @@
+<!--
+ All types of forms such as login, sign up, create a log and send message is using code from following link:
+www.cluemediator.com/login-app-create-login-form-in-reactjs-using-secure-rest-api
+ -->
 import React, { useState } from 'react';
 function Login(props) {
     const username = useFormInput('');
@@ -7,8 +11,6 @@ function Login(props) {
 
     // handle button click of login form
     const handleLogin = async () => {
-        //props.history.push('/dashboard');
-        //let response = await fetch; //Getting data
         let myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
@@ -48,7 +50,7 @@ function Login(props) {
                 <input type="password" {...password} autoComplete="new-password" />
             </div>
             {error && <><small style={{ color: 'red' }}>{error}</small><br /></>}<br />
-            <input type="button" value={loading ? 'Loading...' : 'Login'} onClick={handleLogin} disabled={loading} /><br />
+            <input type="button" value={'Login'} onClick={handleLogin}/><br />
         </div>
     );
 }
