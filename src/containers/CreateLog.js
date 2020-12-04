@@ -4,7 +4,7 @@ function CreateLog(props) {
     const content = useFormInput('');
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
-
+//ldalskdaslndlkasd
     // handle button click of login form
     const handleCreate = async () => {
         var requestOptions = {
