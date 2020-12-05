@@ -3,8 +3,7 @@ function CreateLog(props) {
     const subject = useFormInput('');
     const content = useFormInput('');
     const toUser = useFormInput('');
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(false);
+    const [error] = useState(null);
 
     // handle button click of login form
     const handleSend = async () => {

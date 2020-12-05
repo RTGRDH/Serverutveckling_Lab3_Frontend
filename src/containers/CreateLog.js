@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 function CreateLog(props) {
     const subject = useFormInput('');
     const content = useFormInput('');
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(false);
+    const [error] = useState(null);
 //ldalskdaslndlkasd
     // handle button click of login form
     const handleCreate = async () => {
