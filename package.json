@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "axios": "^0.21.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "socket.io-client": "^3.0.3"
   }
 }

@@ -6,8 +6,7 @@ import React, { useState } from 'react';
 function Login(props) {
     const username = useFormInput('');
     const password = useFormInput('');
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(false);
+    const [error] = useState(null);
 
     // handle button click of login form
     const handleLogin = async () => {

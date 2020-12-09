@@ -7,6 +7,7 @@ import Messages from './containers/Messages';
 import otherLogs from "./containers/OtherLogs";
 import CreateLog from "./containers/CreateLog";
 import CreateMessage from './containers/CreateMessage';
+import canvas from './containers/canvas';
 
 function App() {
     console.log(sessionStorage.getItem('currentUser'));
@@ -22,7 +23,7 @@ function App() {
                         <NavLink activeClassName="active" to="/otherLogs">Other Logs</NavLink>
                         <NavLink activeClassName="active" to="/messages">Messages</NavLink>
                         <NavLink activeClassName="active" to="/createMessage">Send a Message</NavLink>
-                        <NavLink activeClassName="active" to="google.com">Google</NavLink>
+                        <NavLink activeClassName="active" to="/canvas">Whiteboard</NavLink>
                     </div>
                     <div className="content">
                         <Switch>
@@ -33,6 +34,7 @@ function App() {
                             <Route path="/messages" component={Messages}/>
                             <Route path="/createLog" component={CreateLog}/>
                             <Route path="/createMessage" component={CreateMessage}/>
+                            <Route path="/canvas" component={canvas}/>
                         </Switch>
                     </div>
                 </div>
