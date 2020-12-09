@@ -22,6 +22,7 @@ function App() {
                         <NavLink activeClassName="active" to="/otherLogs">Other Logs</NavLink>
                         <NavLink activeClassName="active" to="/messages">Messages</NavLink>
                         <NavLink activeClassName="active" to="/createMessage">Send a Message</NavLink>
+                        <NavLink activeClassName="active" to="google.com">Google</NavLink>
                     </div>
                     <div className="content">
                         <Switch>
