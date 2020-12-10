@@ -13,7 +13,7 @@ class VertX extends React.Component{
             method: 'GET',
             redirect: 'follow'
         };
-        let url1 = "http://localhost:8080/getVals";
+        let url1 = "http://localhost:6972/getVals";
         /*let response = await fetch(url1, requestOptions);
         let data = await response.json();
         this.setState({
